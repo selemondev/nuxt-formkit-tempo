@@ -19,7 +19,7 @@
 
 ## Demo
 
-### Play with it on [Stackblitz]()
+### Play with it on [Stackblitz](https://stackblitz.com/edit/nuxt-starter-2rrjst?file=app.vue)
 
 ## Quick Setup
 
@@ -29,26 +29,7 @@
 npx nuxi@latest module add nuxt-formkit-tempo
 ```
 
-That's it! You can now use nuxt-formkit-tempo in your Nuxt application ✨
-
-### Usage
-
-```vue
-<template>
-  <div style="display: grid; height: 100vh; width: 100vw; place-items: center;">
-    <ClientOnly>
-      {{ newDate }}
-    </ClientOnly>
-  </div>
-</template>
-
-<script setup lang="ts">
-const now = new Date()
-
-const newDate = useFormat(now, 'full')
-</script>
-
-```
+That's it! You can now use nuxt-formkit-tempo in your Nuxt application ✨.
 
 ## Configuration
 
@@ -72,6 +53,8 @@ export default defineNuxtConfig({
 
 then in your component:
 
+### Example 1 with `alias` + `prefix`
+
 ```vue
 <template>
   <div style="display: grid; height: 100vh; width: 100vw; place-items: center;">
@@ -86,6 +69,68 @@ const now = new Date()
 
 const newDate = useFormatDate(now, { date: 'medium', time: 'short' })
 </script>
+```
+
+
+### Example 2 with `prefix` only.
+
+```ts
+export default defineNuxtConfig({
+  modules: ['nuxt-formkit-tempo'],
+  devtools: { enabled: true },
+  tempo: {
+    prefix: 'use'
+  },
+})
+
+```
+
+then in your component:
+
+```vue
+<template>
+  <div style="display: grid; height: 100vh; width: 100vw; place-items: center;">
+    <ClientOnly>
+      {{ newDate }}
+    </ClientOnly>
+  </div>
+</template>
+
+<script setup lang="ts">
+const now = new Date()
+
+const newDate = useFormat(now, 'full')
+</script>
+
+```
+
+
+### Example 3 without `prefix` nor `alias`.
+
+```ts
+export default defineNuxtConfig({
+  modules: ['nuxt-formkit-tempo'],
+  devtools: { enabled: true },
+  tempo: {},
+})
+
+```
+
+```vue
+<template>
+  <div style="display: grid; height: 100vh; width: 100vw; place-items: center;">
+    <ClientOnly>
+      {{ newDate }}
+    </ClientOnly>
+  </div>
+</template>
+
+<script setup lang="ts">
+const now = new Date()
+
+const newDate = format(now, 'full')
+</script>
+
 ```
 
 ## Types
@@ -128,3 +173,6 @@ Below are the types of the `tempo` config:
   ```
 
 </details>
+
+
+Happy hacking ✨.

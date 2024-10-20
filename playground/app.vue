@@ -9,5 +9,5 @@
 <script setup lang="ts">
 const now = new Date()
 
-const newDate = useFormatDate(now, { date: 'medium', time: 'short' })
+const newDate = format(now, 'full')
 </script>
