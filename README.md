@@ -53,7 +53,7 @@ export default defineNuxtConfig({
 
 then in your component:
 
-### Example 1 with `alias` + `prefix`
+### Example 1 with `alias` + `prefix`:
 
 ```vue
 <template>
@@ -72,7 +72,7 @@ const newDate = useFormatDate(now, { date: 'medium', time: 'short' })
 ```
 
 
-### Example 2 with `prefix` only.
+### Example 2 with `prefix` only:
 
 ```ts
 export default defineNuxtConfig({
@@ -105,7 +105,7 @@ const newDate = useFormat(now, 'full')
 ```
 
 
-### Example 3 without `prefix` nor `alias`.
+### Example 3 without `prefix` nor `alias`:
 
 ```ts
 export default defineNuxtConfig({
