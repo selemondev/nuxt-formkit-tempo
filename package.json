@@ -1,6 +1,6 @@
 {
 	"name": "nuxt-formkit-tempo",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "The easiest way to work with dates in Nuxt 3. The unofficial Nuxt module port of @formkit/tempo 🕑.",
 	"repository": "https://github.com/selemondev/nuxt-formkit-tempo",
 	"author": {
