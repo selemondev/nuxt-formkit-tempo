@@ -1,5 +1,5 @@
-import { defineNuxtModule, createResolver, addImports } from '@nuxt/kit'
 import * as formkitTempo from '@formkit/tempo'
+import { addImports, createResolver, defineNuxtModule } from '@nuxt/kit'
 
 export interface ModuleOptions {
   prefix: string
@@ -16,7 +16,7 @@ export default defineNuxtModule<ModuleOptions>({
     name: 'nuxt-formkit-tempo',
     configKey: 'tempo',
     compatibility: {
-      nuxt: '^3.0.0',
+      nuxt: '>=3.0.0',
     },
   },
   // Default configuration options of the Nuxt module
@@ -30,7 +30,9 @@ export default defineNuxtModule<ModuleOptions>({
     const aliasMap = new Map<string, string>(_options.alias)
     for (const name of Object.keys(formkitTempo)) {
       const alias = aliasMap.has(name) ? aliasMap.get(name)! : name
-      const as = _options.prefix ? _options.prefix + firstLetterToUpperCase(alias) : alias
+      const as = _options.prefix
+        ? _options.prefix + firstLetterToUpperCase(alias)
+        : alias
       addImports({ name, as, from: resolve('./runtime/formkit-tempo') })
     }
   },
