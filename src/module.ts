@@ -34,6 +34,16 @@ export default defineNuxtModule<ModuleOptions>({
         ? _options.prefix + firstLetterToUpperCase(alias)
         : alias
       addImports({ name, as, from: resolve('./runtime/formkit-tempo') })
+
+      // Server based imports
+      _nuxt.hook('nitro:config', (nitroConfig) => {
+        nitroConfig.imports = nitroConfig.imports || {}
+        nitroConfig.imports.presets = nitroConfig.imports.presets || []
+        nitroConfig.imports.presets.push({
+          from: resolve('./runtime/formkit-tempo'),
+          imports: [{ name, as }],
+        })
+      })
     }
   },
 })
