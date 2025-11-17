@@ -26,7 +26,7 @@
 		"nuxt-module"
 	],
 	"scripts": {
-		"prepack": "nuxt-module-build build",
+		"prepack": "pnpx esno@latest script/generate-runtime-import && nuxt-module-build build",
 		"dev": "nuxi dev playground",
 		"dev:build": "nuxi build playground",
 		"dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
