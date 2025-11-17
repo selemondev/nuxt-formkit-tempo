@@ -1,5 +1,7 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
   devtools: { enabled: true },
-  tempo: {},
+  tempo: {
+    prefix: 'use',
+  },
 })
