@@ -31,7 +31,7 @@
 		"dev:build": "nuxi build playground",
 		"dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
 		"release": "pnpm lint && pnpm test && pnpm prepack && pnpx changelogen@latest --release && npm publish && git push --follow-tags",
-		"lint": "eslint .",
+		"lint": "eslint . --fix",
 		"test": "vitest run",
 		"test:watch": "vitest watch",
 		"test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
