@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.3.2
+
+[compare changes](https://github.com/selemondev/nuxt-formkit-tempo/compare/v1.3.1...v1.3.2)
+
+### 🏡 Chore
+
+- Update changelogen email flag ([a730f28](https://github.com/selemondev/nuxt-formkit-tempo/commit/a730f28))
+
+### ❤️ Contributors
+
+- Selemondev
+
 ## v1.3.1
 
 [compare changes](https://github.com/selemondev/nuxt-formkit-tempo/compare/v1.3.0...v1.3.1)
