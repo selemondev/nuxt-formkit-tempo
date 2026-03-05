@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.3.4
+
+[compare changes](https://github.com/selemondev/nuxt-formkit-tempo/compare/v1.3.3...v1.3.4)
+
+### 🏡 Chore
+
+- Remove citty version override ([6fb9551](https://github.com/selemondev/nuxt-formkit-tempo/commit/6fb9551))
+
+### ❤️ Contributors
+
+- Selemondev
+
 ## v1.3.3
 
 [compare changes](https://github.com/selemondev/nuxt-formkit-tempo/compare/v1.3.2...v1.3.3)
