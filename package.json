@@ -1,6 +1,6 @@
 {
 	"name": "nuxt-formkit-tempo",
-	"version": "1.2.0",
+	"version": "1.3.0",
 	"description": "The easiest way to work with dates in Nuxt 3. The unofficial Nuxt module port of @formkit/tempo 🕑.",
 	"repository": "https://github.com/selemondev/nuxt-formkit-tempo",
 	"author": {
@@ -30,7 +30,7 @@
 		"dev": "nuxi dev playground",
 		"dev:build": "nuxi build playground",
 		"dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-		"release": "pnpm lint && pnpm prepack && changelogen --release --hide-author-email && git push --follow-tags",
+		"release": "pnpm lint && pnpm prepack && pnpm dlx changelogen --release --hide-author-email && git push --follow-tags",
 		"lint": "eslint . --fix",
 		"test": "vitest run",
 		"test:watch": "vitest watch",

@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.3.0
+
+[compare changes](https://github.com/selemondev/nuxt-formkit-tempo/compare/v1.2.0...v1.3.0)
+
+### 🚀 Enhancements
+
+- Add Nuxt version 4 compatibility ([80a0074](https://github.com/selemondev/nuxt-formkit-tempo/commit/80a0074))
+
+### 🏡 Chore
+
+- Update dependencies ([7fe2e11](https://github.com/selemondev/nuxt-formkit-tempo/commit/7fe2e11))
+- Update lint command ([d603ab4](https://github.com/selemondev/nuxt-formkit-tempo/commit/d603ab4))
+- Update workflowss ([00c7f0b](https://github.com/selemondev/nuxt-formkit-tempo/commit/00c7f0b))
+- Update workflows ([8b9211b](https://github.com/selemondev/nuxt-formkit-tempo/commit/8b9211b))
+- Update release command ([69124d8](https://github.com/selemondev/nuxt-formkit-tempo/commit/69124d8))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.2.0
 
 [compare changes](https://github.com/selemondev/nuxt-formkit-tempo/compare/v1.1.0...v1.2.0)
