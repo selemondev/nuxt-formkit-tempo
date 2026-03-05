@@ -38,20 +38,20 @@
 	},
 	"dependencies": {
 		"@formkit/tempo": "^0.1.2",
-		"@nuxt/kit": "^4.2.1"
+		"@nuxt/kit": "^4.3.1"
 	},
 	"devDependencies": {
 		"@nuxt/devtools": "^2.7.0",
-		"@nuxt/eslint-config": "^1.10.0",
+		"@nuxt/eslint-config": "^1.15.2",
 		"@nuxt/module-builder": "^1.0.2",
-		"@nuxt/schema": "^4.2.1",
-		"@nuxt/test-utils": "^3.20.1",
+		"@nuxt/schema": "^4.3.1",
+		"@nuxt/test-utils": "^3.23.0",
 		"@types/node": "latest",
-		"eslint": "^9.39.1",
-		"nuxt": "^4.2.1",
+		"eslint": "^9.39.3",
+		"nuxt": "^4.3.1",
 		"typescript": "~5.9.3",
 		"vitest": "^3.2.4",
-		"vue-tsc": "^3.1.4"
+		"vue-tsc": "^3.2.5"
 	},
 	"packageManager": "pnpm@9.15.9"
 }
