@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.3.1
+
+[compare changes](https://github.com/selemondev/nuxt-formkit-tempo/compare/v1.3.0...v1.3.1)
+
+### 🏡 Chore
+
+- Override citty version to hide peerDependencies warning ([e7bb074](https://github.com/selemondev/nuxt-formkit-tempo/commit/e7bb074))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.3.0
 
 [compare changes](https://github.com/selemondev/nuxt-formkit-tempo/compare/v1.2.0...v1.3.0)
