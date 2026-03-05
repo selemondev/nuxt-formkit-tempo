@@ -16,7 +16,7 @@ export default defineNuxtModule<ModuleOptions>({
     name: 'nuxt-formkit-tempo',
     configKey: 'tempo',
     compatibility: {
-      nuxt: '>=3.0.0',
+      nuxt: '>=4.1.0',
     },
   },
   // Default configuration options of the Nuxt module
