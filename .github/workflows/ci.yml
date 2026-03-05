@@ -1,9 +1,12 @@
-name: ci
+name: CI
+permissions:
+  contents: read
 
 on:
   push:
     branches:
       - main
+
   pull_request:
     branches:
       - main
@@ -11,35 +14,54 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
-      - run: corepack enable
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
+      - uses: actions/checkout@v6
 
-      - name: Install dependencies
-        run: npx nypm@latest i
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set node
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+
+      - name: Setup
+        run: npm i -g @antfu/ni
+
+      - name: Install
+        run: nci
+
+      - name: Build
+        run: nr dev:prepare
 
       - name: Lint
-        run: npm run lint
+        run: nr lint
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        node: [lts/*]
+        os: [ubuntu-latest, windows-latest, macos-latest]
+      fail-fast: false
 
     steps:
-      - uses: actions/checkout@v4
-      - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set node ${{ matrix.node }}
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: ${{ matrix.node }}
 
-      - name: Install dependencies
-        run: npx nypm@latest i
+      - name: Setup
+        run: npm i -g @antfu/ni
 
-      - name: Playground prepare
-        run: npm run dev:prepare
+      - name: Install
+        run: nci
 
-      - name: Test
-        run: npm run test
+      - name: Build
+        run: nr dev:prepare
