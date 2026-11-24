@@ -176,3 +176,7 @@ Below are the types of the `tempo` config:
 
 
 Happy hacking ✨.
+
+## License
+
+[MIT](./LICENSE) © [Selemon Brahanu](https://selemon.dev)
